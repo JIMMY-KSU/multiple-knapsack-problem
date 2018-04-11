@@ -97,7 +97,7 @@ if __name__ == '__main__':
   #final_chromosome = fitness_function.chromosome
   print('final fittest solution = ' + str(final_chromosome) + ', where fsum = ' + str(fittest_max_fsum))
   result_knapsack = items.get_all_on_items(final_chromosome, m)
-  print result_knapsack
+  print(result_knapsack)
   print('Knapsack 1')
   print([el.index for el in result_knapsack[1]])
 
