@@ -1,7 +1,7 @@
 ---
-m: 2 #number of knapsacks:w
+m: 5 #number of knapsacks
 
-n: 6 #number of items
+n: 12 #number of items
 
 items:
     - [0, 110, 40]   #index, profit, weight
@@ -10,9 +10,19 @@ items:
     - [6, 80, 40]
     - [8, 30, 20]
     - [10, 5, 5]
+    - [12, 50, 10]
+    - [14, 55, 15] 
+    - [16, 60, 20]
+    - [18, 20, 10]
+    - [20, 100, 30]
+    - [22, 90, 25]
+    - [24, 130, 40]
 
 knapsacks:
     - 65
     - 85
+    - 100
+    - 150
+    - 200
 ...
 

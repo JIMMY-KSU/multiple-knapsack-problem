@@ -10,19 +10,23 @@ if __name__ == '__main__':
   from population import Population
   from random import choice
   from mutation import Mutation
+  from time import sleep
 
   rc = RcParser()
   items = ItemList(ItemParser(rc.get_rc_items()).items)
   knapsacks = KnapsackList(KnapsackParser(rc.get_rc_knapsacks()).knapsacks)
   n = rc.get_n()
   m = rc.get_m()
+  print('please note that the number of iterations must be greater than or equal to the number of items')
   print('number of knapsacks = {0}'.format(m))
   print('number of items = {0}'.format(n))
-
-  p = 50
+  
+  p = 10
   print('population size = ' + str(p))
   population = PopulationFactory(p, n, m).gen()
-  iterations = 200
+  iterations = 12
+  print('iterations = {0}'.format(iterations))
+  sleep(3)
   fittest_chromosome = None
   fittest_chromosomes = []
   for _ in range(iterations):
@@ -97,6 +101,7 @@ if __name__ == '__main__':
   #final_chromosome = fitness_function.chromosome
   print('final fittest solution = ' + str(final_chromosome) + ', where fsum = ' + str(fittest_max_fsum))
   result_knapsack = items.get_all_on_items(final_chromosome, m)
+  print('Result knapsack')
   print(result_knapsack)
   print('Knapsack 1')
   print([el.index for el in result_knapsack[1]])
